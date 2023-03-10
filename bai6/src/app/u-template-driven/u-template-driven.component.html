@@ -1,0 +1,21 @@
+<!-- <div class="container">
+<form #formProfile="ngForm" (ngSubmit)="onSubmit(formProfile.value)" action="">
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input #email="ngModel" type="email" ngModel name="email" class="form-control" required minlength="3">
+        <div *ngIf="!email?.valid && (email?.dirty || email?.touched) && email.errors?.['required']"
+            class="form-text text-danger">Email is required</div>
+        <div *ngIf="!email?.valid && (email?.dirty || email?.touched) && email.errors?.['minlength']"
+            class="form-text text-danger">Email minlength is 3</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input #username="ngModel" name="username" ngModel type="text" class="form-control" required minlength="3">
+        <div *ngIf="!username?.valid && (username?.dirty || username?.touched) && username.errors?.['required']"
+            class="form-text text-danger">username is required</div>
+        <div *ngIf="!username?.valid && (username?.dirty || username?.touched) && username.errors?.['minlength']"
+            class="form-text text-danger">Email minlength is 3</div>
+    </div>
+    <button [disabled]="!formProfile.valid" type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div> -->

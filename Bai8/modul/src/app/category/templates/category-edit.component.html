@@ -1,0 +1,12 @@
+<h1>Sửa thể loại </h1>
+<div class="container">
+    <form [formGroup]="formProfile" (ngSubmit)="onSubmitForm()">
+        <div class="mb-3">
+          <label  class="form-label">Tên thể loại</label>
+          <input formControlName="name" type="name" name="name" class="form-control" >
+          <div *ngIf="!formProfile.controls['name']?.valid && (formProfile.controls['name']?.dirty || formProfile.controls['name']?.touched) && formProfile.controls['name'].errors?.['required']" class="form-text text-danger">Không được để trống</div>
+          <div *ngIf="!formProfile.controls['name']?.valid && (formProfile.controls['name']?.dirty || formProfile.controls['name']?.touched) && formProfile.controls['name'].errors?.['minlength']" class="form-text text-danger">Giới hạn 3 ký tự</div>
+        </div>
+        <button [disabled]="!formProfile.valid" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

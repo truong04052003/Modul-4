@@ -1,0 +1,74 @@
+<!-- <div class="container">
+    <form [formGroup]="formProfile" (ngSubmit)="onSubmitForm()">
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input formControlName="email" type="email" name="email" class="form-control"
+                placeholder="Nhập email của bạn">
+            <div *ngIf="!formProfile.controls['email']?.valid && (formProfile.controls['email']?.dirty || formProfile.controls['email']?.touched) && formProfile.controls['email'].errors?.['required']"
+                class="form-text text-danger">Không được để trống</div>
+            <div *ngIf="!formProfile.controls['email']?.valid && (formProfile.controls['email']?.dirty || formProfile.controls['email']?.touched) && formProfile.controls['email'].errors?.['pattern']"
+                class="form-text text-danger">Sai định dạng</div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Mật khẩu</label>
+            <input formControlName="password" name="password" type="password" #pw class="form-control"
+                placeholder="Mật khẩu">
+            <div *ngIf="!formProfile.controls['password']?.valid && (formProfile.controls['password']?.dirty || formProfile.controls['password']?.touched) && formProfile.controls['password'].errors?.['required']"
+                class="form-text text-danger">Không được để trống</div>
+            <div *ngIf="!formProfile.controls['password']?.valid && (formProfile.controls['password']?.dirty || formProfile.controls['password']?.touched) && formProfile.controls['password'].errors?.['minLength']"
+                class="form-text text-danger">Tối đa 6 ký tự</div>
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nhập lại mật khẩu</label>
+            <input formControlName="confirmpassword" name="confirmpassword" type="password" #cpw
+                (keyup)='checkPasswords(pw.value, cpw.value)' class="form-control" placeholder="Nhập lại mật khẩu">
+            <div *ngIf="!formProfile.controls['confirmpassword']?.valid && (formProfile.controls['confirmpassword']?.dirty || formProfile.controls['confirmpassword']?.touched) && formProfile.controls['confirmpassword'].errors?.['required']"
+                class="form-text text-danger">Không được để trống</div>
+            <div *ngIf='!passwordsMatching && isConfirmPasswordDirty' class="form-text text-danger"> Mật khẩu nhập chưa
+                khớp</div>
+        </div> -->
+        <!-- quốc gia -->
+        <!-- <label class="form-label">Quốc gia</label>
+        <div class="mb-3">
+            <select class="form-control" name="country" formControlName="country">
+                <option value="">Chưa chọn quốc gia</option>
+                <option value="vietnam">Việt Nam</option>
+                <option value="my">Mỹ</option>
+                <option value="lao">Lào</option>
+            </select>
+            <div *ngIf="!formProfile.controls['country']?.valid && (formProfile.controls['country']?.dirty || formProfile.controls['country']?.touched) && formProfile.controls['country'].errors?.['required']"
+                class="form-text text-danger">Không được để trống</div>
+        </div> -->
+        <!-- tuổi -->
+        <!-- <div class="mb-3">
+            <label class="form-label"> Tuổi </label>
+            <input formControlName="age" name="age" type="text" class="form-control">
+            <div *ngIf="!formProfile.controls['age']?.valid && (formProfile.controls['age']?.dirty || formProfile.controls['age']?.touched) && formProfile.controls['age'].errors?.['required']"
+                class="form-text text-danger">Không được để trống</div>
+            <div *ngIf="!formProfile.controls['age']?.valid && (formProfile.controls['age']?.dirty || formProfile.controls['age']?.touched) && formProfile.controls['age'].errors?.['min']"
+                class="form-text text-danger">Lớn hơn 18</div>
+        </div>
+        <div class="mb-3">
+            <p>
+                <input type="radio" value="nam" name="gender" formControlName="gender"> Nam
+                <input type="radio" value="nu" name="gender" formControlName="gender"> Nữ
+            </p>
+            <div *ngIf="!formProfile.controls['gender']?.valid && (formProfile.controls['gender']?.dirty || formProfile.controls['gender']?.touched) && formProfile.controls['gender'].errors?.['required']"
+                class="form-text text-danger">Không được để trống</div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Số điện thoại</label>
+            <input formControlName="phone" name="phone" type="text" class="form-control">
+            <div *ngIf="!formProfile.controls['phone']?.valid && (formProfile.controls['phone']?.dirty || formProfile.controls['phone']?.touched) && formProfile.controls['phone'].errors?.['required']"
+                class="form-text text-danger">Không được để trống</div>
+            <div *ngIf="!formProfile.controls['phone']?.valid && (formProfile.controls['phone']?.dirty || formProfile.controls['phone']?.touched) && formProfile.controls['phone'].errors?.['pattern']"
+                class="form-text text-danger">Sai định dạng</div>
+        </div>
+
+
+        <button [disabled]="!formProfile.valid" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div> -->

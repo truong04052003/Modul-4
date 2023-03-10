@@ -1,0 +1,18 @@
+<div class="container">
+    <form [formGroup]="formProfile" (ngSubmit)="onSubmitForm()">
+        <div class="mb-3">
+          <label  class="form-label">Email</label>
+          <input formControlName="email" type="email" name="email" class="form-control" >
+          <div *ngIf="!formProfile.controls['email']?.valid && (formProfile.controls['email']?.dirty || formProfile.controls['email']?.touched) && formProfile.controls['email'].errors?.['required']" class="form-text text-danger">Email is required</div>
+          <div *ngIf="!formProfile.controls['email']?.valid && (formProfile.controls['email']?.dirty || formProfile.controls['email']?.touched) && formProfile.controls['email'].errors?.['minlength']" class="form-text text-danger">Email minlength is 3</div>
+        </div>
+    
+        <div class="mb-3">
+            <label  class="form-label">Username</label>
+            <input formControlName="username" type="username" name="username" class="form-control" >
+            <div *ngIf="!formProfile.controls['username']?.valid && (formProfile.controls['username']?.dirty || formProfile.controls['username']?.touched) && formProfile.controls['username'].errors?.['required']" class="form-text text-danger">username is required</div>
+            <div *ngIf="!formProfile.controls['username']?.valid && (formProfile.controls['username']?.dirty || formProfile.controls['username']?.touched) && formProfile.controls['username'].errors?.['minlength']" class="form-text text-danger">Email minlength is 3</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

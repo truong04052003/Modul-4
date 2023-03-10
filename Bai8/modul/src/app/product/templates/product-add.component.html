@@ -1,0 +1,25 @@
+<h1>Thêm sản phẩm</h1>
+<div class="container">
+    <form [formGroup]="formProfile" (ngSubmit)="handleSubmit(formProfile.value)">
+        <div class="mb-3">
+          <label  class="form-label">Name</label>
+          <input formControlName="name" type="name" ngModel name="name" class="form-control" >
+          <div *ngIf="!formProfile.controls['name']?.valid && (formProfile.controls['name']?.dirty || formProfile.controls['name']?.touched) && formProfile.controls['name'].errors?.['required']" class="form-text text-danger">Vui lòng nhập tên</div>
+          <div *ngIf="!formProfile.controls['name']?.valid && (formProfile.controls['name']?.dirty || formProfile.controls['name']?.touched) && formProfile.controls['name'].errors?.['minlength']" class="form-text text-danger">Giới hạn 3 ký tự</div>
+        </div>
+    
+        <div class="mb-3">
+            <label  class="form-label">Price</label>
+            <input formControlName="price" type="price" ngModel name="price" class="form-control" >
+            <div *ngIf="!formProfile.controls['price']?.valid && (formProfile.controls['price']?.dirty || formProfile.controls['price']?.touched) && formProfile.controls['price'].errors?.['required']" class="form-text text-danger">Vui lòng nhập giá</div>
+            <div *ngIf="!formProfile.controls['price']?.valid && (formProfile.controls['price']?.dirty || formProfile.controls['price']?.touched) && formProfile.controls['price'].errors?.['minlength']" class="form-text text-danger">Sai định dạng</div>
+        </div>
+        <!-- <div class="mb-3">
+            <label  class="form-label">Mô tả</label>
+            <input formControlName="description" type="description" ngModel name="description" class="form-control" >
+            <div *ngIf="!formProfile.controls['description']?.valid && (formProfile.controls['description']?.dirty || formProfile.controls['description']?.touched) && formProfile.controls['description'].errors?.['required']" class="form-text text-danger">Vui lòng nhập mô tả</div>
+            <div *ngIf="!formProfile.controls['description']?.valid && (formProfile.controls['description']?.dirty || formProfile.controls['description']?.touched) && formProfile.controls['price'].errors?.['minlength']" class="form-text text-danger">Giới hạn 3 ký tự</div>
+        </div> -->
+        <button [disabled]="!formProfile.valid" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
